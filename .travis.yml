@@ -1,0 +1,26 @@
+---
+language: python
+python: 2.7
+cache: pip
+
+addons:
+  apt:
+    sources:
+      - debian-sid
+    packages:
+      - shellcheck
+
+matrix:
+  fast_finish: true
+
+env:
+  - TEST_RUN="./tests/test-flake8.sh"
+  - TEST_RUN="./tests/test-shellcheck.sh"
+  - TEST_RUN="./tests/test-yamllint.sh"
+
+before_install:
+  - pip install -U -r test-requirements.txt
+
+install: true
+
+script: "$TEST_RUN"

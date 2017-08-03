@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/IBM/github-traffic-stats-collector.svg?branch=master)](https://travis-ci.org/IBM/github-traffic-stats-collector)
+
 # github-traffic-stats-collector
 
 WORK IN PROGRESS
